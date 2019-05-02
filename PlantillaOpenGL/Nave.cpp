@@ -4,8 +4,6 @@
 Nave::Nave() {
 	angulo = 0.0f;
 	coordenadas = vec3(0.0f, 0.0f, 0.0f);
-	//Establece el valor como una matriz identidad
-	transformaciones = mat4(1.0f);
 
 	Vertice v1 = {
 		vec4(0.0f,0.1f,0.0f,1.0f),
@@ -46,13 +44,6 @@ void Nave::avanzar() {
 }
 
 void Nave::actualizarMatrizTransformacion() {
-	//Partir siempre de una matriz identidad
-	transformaciones = mat4(1.0f);
-	//Aplicar las transformaciones
-	transformaciones =
-		translate(transformaciones, coordenadas);
-	transformaciones =
-		rotate(transformaciones, angulo * 3.14159f / 180.0f,
-			vec3(0.0f, 0.0f, 1.0f));
+
 
 }
