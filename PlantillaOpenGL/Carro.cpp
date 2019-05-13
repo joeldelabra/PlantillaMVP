@@ -8,6 +8,10 @@ void Carro::actualizarMatrizModelo()
 
 	}
 
+vec3 Carro::getCoordenadas(){
+	return coordenadas;
+}
+
 
 void Carro::avanzar()
 {

@@ -9,9 +9,10 @@ public:
 	Carro();
 	void avanzar();
 	void rotar();
+	vec3 getCoordenadas();
 private: 
 	void actualizarMatrizModelo();
 	vec3 coordenadas = vec3(0.0f, 0.0f, 0.0f);
-	
+
 
 };
